@@ -20,8 +20,6 @@ public class Members {
     /**
      * Läsa personposter från textfilen.
      *
-     * @param path String path t.ex "data/customers.txt"
-     * @return Sant eller falsk
      */
     public boolean generateMemberListFromFile(String path) {
         Path filePath = Paths.get(path);

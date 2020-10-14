@@ -28,10 +28,10 @@ public class GymTest {
 
     @Test
     public void readNameDataTest() {
-        Scanner nameInput = new Scanner("bear belle   ");
+        Scanner nameInput = new Scanner("Bear   Belle   ");
         assertTrue(gymTest.readNameData(nameInput).equalsIgnoreCase("Bear Belle"));
-        Scanner nameInput2 = new Scanner("   ");
-        assertThrows(NoSuchElementException.class, () -> gymTest.readNameData(nameInput2));
+        Scanner nameInput2 = new Scanner("234234324");
+        assertThrows(IllegalArgumentException.class, () -> gymTest.readNameData(nameInput2));
     }
 
 }

@@ -21,7 +21,7 @@ class MembersTest {
         String searchWord = "Alhambra Aromes";
         assertEquals(members.getMember(searchWord)
                 .getName(),"Alhambra Aromes");
-        searchWord = "Toshiko";
+        searchWord = "Toshiko Kuno";
         assertNull(members.getMember(searchWord));
     }
 

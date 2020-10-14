@@ -19,7 +19,7 @@ public class Gym {
 
         while (true) {
             String searchWd = "";
-            System.out.println("Hur vill du söka kunden?");
+            System.out.println("Hur vill du söka en kund?");
             System.out.println("1: Personnummer  \n2: Namn");
             if (in.hasNextLine()) {
                 try {
