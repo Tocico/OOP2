@@ -19,13 +19,13 @@ import java.time.Period;
 public class Person {
     private String name;
     private String personalId;
-    private LocalDate registeredDate;
+    private LocalDate paymentDate;
 
 
-    public Person(String name, String personalId, LocalDate registeredDate) {
+    public Person(String name, String personalId, LocalDate paymentDate) {
         this.name = name;
         this.personalId = personalId;
-        this.registeredDate = registeredDate;
+        this.paymentDate = paymentDate;
     }
 
     public String getPersonalId() {
@@ -42,7 +42,7 @@ public class Person {
      * @return om det är aktiv eller inaktiv medlem
      */
     public boolean isActiveMember() {
-        Period date = Period.between(registeredDate, LocalDate.now());
+        Period date = Period.between(paymentDate, LocalDate.now());
         if (date.getYears() == 0) {
             return true;
         } else {

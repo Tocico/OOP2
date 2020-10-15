@@ -23,14 +23,13 @@ public class Members {
      */
     public boolean generateMemberListFromFile(String path) {
         Path filePath = Paths.get(path);
-        try {
-            Scanner in = new Scanner(filePath);
+        try (Scanner in = new Scanner(filePath)){
             in.useDelimiter(",|\n");
             while (in.hasNext()) {
                 String personalId = in.next().trim();
                 String name = in.next().trim();
-                LocalDate date = LocalDate.parse(in.next().trim());
-                Person member = new Person(name, personalId, date);
+                LocalDate paymentDate = LocalDate.parse(in.next().trim());
+                Person member = new Person(name, personalId, paymentDate);
                 membersList.add(member);
             }
         } catch (Exception e) {

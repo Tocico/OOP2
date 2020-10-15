@@ -39,8 +39,8 @@ public class Gym {
                     if (member != null) {
                         System.out.println("Välkommen tillbaka " + member.getName());
                         System.out.println("Status: " + (member.isActiveMember() ? "aktiv" : "inaktiv"));
-                        System.out.println("-----------------------------------------------------------");
                         if (member.isActiveMember()) {
+                            System.out.println("-----------------------------------------------------------");
                             if (member.addVisitationDate(membersPath))
                                 break;
                             else throw new Exception("Något gick fel. Försök igen");
